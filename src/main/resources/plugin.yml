@@ -1,0 +1,5 @@
+name: SortingSystemPlugin
+version: '${project.version}'
+main: me.brannstrom.sortingsystem.SortingSystemPlugin
+api-version: 1.19
+authors: [ MiniGutt ]
