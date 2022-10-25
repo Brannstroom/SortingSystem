@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -21,7 +22,7 @@ import net.kyori.adventure.text.Component;
 
 public class HopperListener implements Listener {
 
-	@EventHandler(priority = org.bukkit.event.EventPriority.HIGHEST)
+	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
 	public void onInventoryMove(final InventoryMoveItemEvent event) {
 
 		final ItemStack item = event.getItem();
